@@ -1,0 +1,31 @@
+###############  Data Generation ##############################
+# Data Generation
+Text='The deadline for the homework is on September'
+#Mat_text(text_to_num(Text),2)
+key = np.array([
+    [17, 17],
+    [21, 18],])
+key = np.array([
+    [17, 17,11],
+    [21, 18,3],
+    [2, 4,23],])
+key = np.array([
+    [17, 17,11,23],
+    [21, 18,3,6],
+    [2, 4,23,17],
+    [12, 14,2,19],])
+
+Text_encryption(Text,key)[1]
+Cipher=Out_text(Text_encryption(Text,key)[1])
+Cipher
+
+
+
+####################### Cryptanalysis  #############################
+
+#Example 1: 'The deadline for the homework is on September'
+#cipher='chbsqqwptgrcxychhmwmkwxyaccmbztarfrojk'   # for n=2
+cipher='kxkfttmvqdbkjwsjlqecwaszkwcbyjfygkczvim'   # for n=3
+#cipher='unqgyafojovjpqgwxcvcieyfwkeshrhgbpfibcaa'  # for n=4
+known_text_mat=['or th','deadline f','the deadline for th']
+Cryptanalysis(known_text_mat,cipher)
